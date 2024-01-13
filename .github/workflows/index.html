@@ -3,7 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Il Tuo Shop Online</title>
+  
+  <script>
+    function redirectToRevolut() {
+      // Sostituisci 'https://link-al-tuo-conto-revolut' con il tuo link effettivo
+      window.location.href = 'https://www.paypal.me/GiovanniAlioto';
+    }
+  </script>
+  
+  <title>SoldierKidShop</title>
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -16,26 +25,35 @@
       background-color: #ff4500;
       color: white;
       text-align: center;
-      padding: 10px;
-      font-size: 24px;
-      font-weight: bold;
-      text-transform: uppercase;
+      padding: 20px;
       position: relative;
     }
 
     .flash-sales {
       display: inline-block;
-      background-color: #ff4500;
+      background-color: #ff0000;
+      color: white;
+      padding: 10px 20px;
+      font-size: 36px;
+      font-weight: bold;
+      border-radius: 10px;
+      position: absolute;
+      top: 50%;
+      left: 78%;
+      transform: translate(-50%, -50%);
+      animation: flash 1s infinite alternate;
+      cursor: pointer;
+    }
+
+    .discount-badge {
+      display: inline-block;
+      background-color: #ff0000;
       color: white;
       padding: 5px 10px;
       font-size: 18px;
       font-weight: bold;
       border-radius: 5px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      animation: flash 1s infinite alternate;
+      margin-top: 10px;
     }
 
     @keyframes flash {
@@ -47,17 +65,34 @@
       }
     }
 
+    h1 {
+      background-color: white;
+      padding: 10px;
+      border-radius: 10px;
+      margin-top: 20px;
+      color:black;
+      outline: auto;
+      margin-right: 500px;
+      margin-left: 500px;
+
+    } 
+
     main {
       padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
     }
 
     .product {
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      padding: 10px;
-      margin-bottom: 20px;
-      background-color: white;
-    }
+  flex: 0 0 calc(50% - 20px); /* Imposta la larghezza del 50% con margine di 20px */
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 0 10px 20px 0; /* Aggiungi margine tra i prodotti */
+  background-color: white;
+  position:relative
+}
 
     .product img {
       max-width: 100%;
@@ -82,26 +117,88 @@
       bottom: 0;
       width: 100%;
     }
+
+    .buy-button {
+    position: absolute;
+    bottom: 80px; /* o qualsiasi altra posizione che preferisci */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    font-size: 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bolder;
+  }
+
+    img{
+
+      border: 3px solid;
+      border-color: rgb(0, 0, 0);
+
+    }
+
+    p{
+      
+      font-weight: bolder;
+    }
+    .cart-icon {
+      position: absolute;
+      top: 40px;
+      right: 40px;
+      width: 50px;
+      height: auto;
+    }
+
   </style>
 </head>
+
 <body>
   <header>
-    Il Tuo Shop Online
-    <div class="flash-sales">Flash Sales!</div>
+
+    <a href=https://www.youtube.com/watch?v=dQw4w9WgXcQ>
+    <div class="flash-sales">Flash Sales! <span class="discount-badge">-60%</span></div>
+    </a>
+    
+    <img class="cart-icon" src="https://i.pinimg.com/originals/9a/59/fd/9a59fd19a120667b79f38e1421149284.png" alt="Carrello">
+
+    <h1>SoldierKidShop</h1>
+
+
   </header>
 
   <main>
     <div class="product">
-      <img src="immagine1.jpg" alt="Prodotto 1">
-      <h2>Prodotto 1</h2>
-      <p>Descrizione del prodotto. Prezzo: €<span id="price1">XX.XX</span></p>
+      <h2>Bambini Iraniani</h2>
+      <img src=https://www.avvenire.it/c/2018/PublishingImages/54e82b2e98df4c689cda07499e6e114e/Ye.jpg? alt="Prodotto 1" width="200" height="200">
+      <button class="buy-button" onclick="redirectToRevolut()">BUY</button>
+      <p>Prezzo: €<span id="price1">15,99 *al pezzo* </span></p>
     </div>
 
     <div class="product">
-      <img src="immagine2.jpg" alt="Prodotto 2">
-      <h2>Prodotto 2</h2>
-      <p>Descrizione del prodotto. Prezzo: €<span id="price2">XX.XX</span></p>
+      <h2>Bambini Africani</h2>
+      <img src=https://www.repstatic.it/content/nazionale/img/2021/02/12/110900234-95bcf678-4c88-445d-a490-aba22d0fdf07.jpg alt="Prodotto 2" width="200" height="200">
+      <button class="buy-button" onclick="redirectToRevolut()">BUY</button>
+      <p>Prezzo: €<span id="price2">29,99 *al pezzo* </span></p>
     </div>
+
+    <div class="product">
+        <h2>Bambini Cinesi</h2>
+        <img src="https://www.tempi.it/wp-content/uploads/2021/04/hong-kong-armi-giocattolo-educazione-sicurezza-nazionale-1.jpg" alt="Prodotto 3" width="200" height="200">
+        <button class="buy-button" onclick="redirectToRevolut()">BUY</button>
+        <p>Prezzo: €<span id="price2">48,99 *al pezzo* </span></p>
+
+    </div>
+
+    <div class="product">
+      <h2>Marco Palmeri</h2>
+      <img src="C:\Users\lenovo\Desktop\WhatsApp Image 2024-01-13 at 01.30.51.jpg" alt="Prodotto 4" width="130" height="100">
+      <button class="buy-button" onclick="redirectToRevolut()">BUY</button>
+      <p>Prezzo: €<span id="price2">69.999,99 *pezzo unico* </span></p>
+
+  </div>
 
     <!-- Aggiungi altri prodotti secondo necessità -->
   </main>
@@ -111,3 +208,4 @@
   </footer>
 </body>
 </html>
+
